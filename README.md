@@ -35,13 +35,13 @@ Next i
 
 ##### Runtime for Original Method on 2017 data
 
-![VBA_Challenge_Original_2017.PNG]Resources/VBA_Challenge_Original_2017.PNG
+![VBA_Challenge_Original_2017.PNG](Resources/VBA_Challenge_Original_2017.PNG)
 
 Runtime for original method on 2017 data: 1.4961 seconds
 
 ##### Runtime for Original Method on 2018 data
 
-![VBA_Challenge_Original_2018.PNG]Resources/VBA_Challenge_Original_2018.png
+![VBA_Challenge_Original_2018.PNG](Resources/VBA_Challenge_Original_2018.png)
 
 Runtime for original method on 2018 data: 1.5195 seconds
 
@@ -84,13 +84,13 @@ within the workbook are grouped together and in ascending date order.
 
 ##### Runtime for Refactored Method on 2017 data
 
-![VBA_Challenge_2017.PNG]Resources/VBA_Challenge_2017.png
+![VBA_Challenge_2017.PNG](Resources/VBA_Challenge_2017.png)
 
 Runtime for refactored method on 2017 data: 0.15625 seconds
 
 ##### Runtime for Refactored Method on 2018 data
 
-![VBA_Challenge_2018.PNG]Resources/VBA_Challenge_2018.png
+![VBA_Challenge_2018.PNG](Resources/VBA_Challenge_2018.png)
 
 Runtime for refactored method on 2018 data: 0.16406 seconds
 
