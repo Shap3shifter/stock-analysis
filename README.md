@@ -17,7 +17,7 @@ listed in our array until all array elements are covered. In performing this met
 data is scanned multiple times, equal to the number of elements in our array. This can be demonstrated by the
 abridged example code below.  
 
-##### Original Method
+#### Original Method
 
 ```
 For i = 0 To x
@@ -33,15 +33,15 @@ For i = 0 To x
 Next i
 ```
 
-#### Runtime for Original Method on 2017 data
+##### Runtime for Original Method on 2017 data
 
-!Resources/VBA_Challenge_Original_2017.png
+![VBA_Challenge_Original_2017.PNG]Resources/VBA_Challenge_Original_2017.PNG
 
 Runtime for original method on 2017 data: 1.4961 seconds
 
-#### Runtime for Original Method on 2018 data
+##### Runtime for Original Method on 2018 data
 
-!Resources/VBA_Challenge_Original_2018.png
+![VBA_Challenge_Original_2018.PNG]Resources/VBA_Challenge_Original_2018.png
 
 Runtime for original method on 2018 data: 1.5195 seconds
 
@@ -56,7 +56,7 @@ simply reading consecutive rows. When a group of stocks were read, we had an ind
 would increment and start gathering data about the next stock in our file. This is demonstrated by the abridged
 refactored example below.
 
-##### Refactored Method
+#### Refactored Method
 
 ```
 #Initialize tickerIndex variable
@@ -82,15 +82,15 @@ Next i
 To have this work effectively, we have to assume that the data is lined up as such that all elements of a stock 
 within the workbook are grouped together and in ascending date order.
 
-#### Runtime for Refactored Method on 2017 data
+##### Runtime for Refactored Method on 2017 data
 
-!Resources/VBA_Challenge_2017.png
+![VBA_Challenge_2017.PNG]Resources/VBA_Challenge_2017.png
 
 Runtime for refactored method on 2017 data: 0.15625 seconds
 
-#### Runtime for Refactored Method on 2018 data
+##### Runtime for Refactored Method on 2018 data
 
-!Resources/VBA_Challenge_2018.png
+![VBA_Challenge_2018.PNG]Resources/VBA_Challenge_2018.png
 
 Runtime for refactored method on 2018 data: 0.16406 seconds
 
