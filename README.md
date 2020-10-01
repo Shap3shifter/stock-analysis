@@ -17,9 +17,10 @@ listed in our array until all array elements are covered. In performing this met
 data is scanned multiple times, equal to the number of elements in our array. This can be demonstrated by the
 abridged example code below.  
 
-#####Original Method
+##### Original Method
 
-```For i = 0 To x
+```
+For i = 0 To x
 	
 	ticker = tickers(x)
 	`Initialize values
@@ -29,7 +30,8 @@ abridged example code below.
 			
 	Next j
 		
-Next i```
+Next i
+```
 
 #### Runtime for Original Method on 2017 data
 
@@ -56,7 +58,8 @@ refactored example below.
 
 ##### Refactored Method
 
-```#Initialize tickerIndex variable
+```
+#Initialize tickerIndex variable
 
 tickerIndex = 0
 
@@ -73,7 +76,8 @@ For i = 2 to RowCount
 	
 	End If
 	
-Next i```
+Next i
+```
 
 To have this work effectively, we have to assume that the data is lined up as such that all elements of a stock 
 within the workbook are grouped together and in ascending date order.
