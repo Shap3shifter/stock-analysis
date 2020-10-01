@@ -17,26 +17,28 @@ listed in our array until all array elements are covered. In performing this met
 data is scanned multiple times, equal to the number of elements in our array. This can be demonstrated by the
 abridged example code below.  
 
-Original Method
-```
-For i = 0 To x
+#####Original Method
+
+```For i = 0 To x
 	
 	ticker = tickers(x)
 	`Initialize values
 		
 	For j = 2 To RowCount
-		`Read all the rows and gather info to relevant ith index
+		#Read all the rows and gather info to relevant ith index
 			
 	Next j
 		
 Next i```
 
 #### Runtime for Original Method on 2017 data
+
 !Resources/VBA_Challenge_Original_2017.png
 
 Runtime for original method on 2017 data: 1.4961 seconds
 
 #### Runtime for Original Method on 2018 data
+
 !Resources/VBA_Challenge_Original_2018.png
 
 Runtime for original method on 2018 data: 1.5195 seconds
@@ -52,20 +54,21 @@ simply reading consecutive rows. When a group of stocks were read, we had an ind
 would increment and start gathering data about the next stock in our file. This is demonstrated by the abridged
 refactored example below.
 
-Refactored Method
-```
-`Initialize tickerIndex variable
+##### Refactored Method
+
+```#Initialize tickerIndex variable
+
 tickerIndex = 0
 
+#Read rows to determine starting/current rows of current stock data gather stock data
 For i = 2 to RowCount
-	`Read rows to determine starting/current rows of current stock data gather stock data 
-	
-	`Read final row of current stock data...
+	 
+	#Read final row of current stock data...
 	If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i,1).Value = tickers(tickerIndex) Then
 	
 		tickerEndingPrices(tickerIndex) = Cells(i,6).Value
 		
-		`Then onto the next stock!
+		#Then onto the next stock!
 		tickerIndex = tickerIndex + 1 
 	
 	End If
@@ -76,11 +79,13 @@ To have this work effectively, we have to assume that the data is lined up as su
 within the workbook are grouped together and in ascending date order.
 
 #### Runtime for Refactored Method on 2017 data
+
 !Resources/VBA_Challenge_2017.png
 
 Runtime for refactored method on 2017 data: 0.15625 seconds
 
 #### Runtime for Refactored Method on 2018 data
+
 !Resources/VBA_Challenge_2018.png
 
 Runtime for refactored method on 2018 data: 0.16406 seconds
